@@ -12,6 +12,7 @@ const messages = defineMessages({
       key, select,
       discussion {Discussions}
       coursework {Course Work}
+      updates {Updates}
       other {{key}}
     }`,
     description: 'Display text for Notification Types',
@@ -23,6 +24,7 @@ const messages = defineMessages({
       core {Core notifications}
       newDiscussionPost {New discussion posts}
       newQuestionPost {New question posts}
+      courseUpdate {Course updates}
       other {{text}}
     }`,
     description: 'Display text for Notification Types',
