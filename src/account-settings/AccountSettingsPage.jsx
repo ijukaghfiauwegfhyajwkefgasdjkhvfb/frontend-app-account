@@ -492,7 +492,7 @@ class AccountSettingsPage extends React.Component {
     const { verifiedName } = this.props;
 
     const hasWorkExperience = !!this.props.formValues?.extended_profile?.find(field => field.field_name === 'work_experience');
-
+    const hideUserName = !!this.props.formValues?.hide_username;
     const timeZoneOptions = this.getLocalizedTimeZoneOptions(
       this.props.timeZoneOptions,
       this.props.countryTimeZoneOptions,
@@ -539,7 +539,8 @@ class AccountSettingsPage extends React.Component {
           {this.renderManagedProfileMessage()}
 
           {this.renderNameChangeModal()}
-
+          {!hideUserName
+          && (
           <EditableField
             name="username"
             type="text"
@@ -552,6 +553,7 @@ class AccountSettingsPage extends React.Component {
             isEditable={false}
             {...editableFieldProps}
           />
+          )}
           <EditableField
             name="name"
             type="text"
@@ -891,6 +893,7 @@ AccountSettingsPage.propTypes = {
     shouldDisplayDemographicsSection: PropTypes.bool,
     useVerifiedNameForCerts: PropTypes.bool.isRequired,
     verified_name: PropTypes.string,
+    hide_username: PropTypes.bool,
   }).isRequired,
   committedValues: PropTypes.shape({
     name: PropTypes.string,

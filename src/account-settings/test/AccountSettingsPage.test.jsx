@@ -98,4 +98,13 @@ describe('AccountSettingsPage', () => {
 
     fireEvent.click(submitButton);
   });
+
+  it('does not show the username field when hide_username is true', () => {
+    props.formValues.hide_username = true;
+    const { queryByLabelText } = render(reduxWrapper(<IntlAccountSettingsPage {...props} />));
+
+    // Check if the username field is not present in the DOM
+    const usernameField = queryByLabelText('Username');
+    expect(usernameField).toBeNull();
+  });
 });
