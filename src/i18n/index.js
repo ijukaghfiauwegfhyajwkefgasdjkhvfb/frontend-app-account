@@ -16,29 +16,26 @@ import zhcnMessages from './messages/zh_CN.json';
 import dedeCAMessages from './messages/de_DE.json';
 import ititCAMessages from './messages/it_IT.json';
 import ptptCAMessages from './messages/pt_PT.json';
+import viMessage from './messages/vi.json';
 // no need to import en messages-- they are in the defaultMessage field
 
 const appMessages = {
-  ar: arMessages,
-  'es-419': es419Messages,
-  'fa-ir': faIRMessages,
-  fr: frMessages,
-  'zh-cn': zhcnMessages,
-  pt: ptMessages,
-  it: itMessages,
-  de: deMessages,
-  hi: hiMessages,
-  'fr-ca': frCAMessages,
-  ru: ruMessages,
-  uk: ukMessages,
-  'de-de': dedeCAMessages,
-  'it-it': ititCAMessages,
-  'pt-pt': ptptCAMessages,
+    ar: arMessages,
+    'es-419': es419Messages,
+    'fa-ir': faIRMessages,
+    fr: frMessages,
+    'zh-cn': zhcnMessages,
+    pt: ptMessages,
+    it: itMessages,
+    de: deMessages,
+    hi: hiMessages,
+    'fr-ca': frCAMessages,
+    ru: ruMessages,
+    uk: ukMessages,
+    'de-de': dedeCAMessages,
+    'it-it': ititCAMessages,
+    'pt-pt': ptptCAMessages,
+    vi: viMessage,
 };
 
-export default [
-  headerMessages,
-  paragonMessages,
-  footerMessages,
-  appMessages,
-];
+export default [headerMessages, paragonMessages, footerMessages, appMessages];
