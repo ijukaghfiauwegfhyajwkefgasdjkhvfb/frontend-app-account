@@ -173,6 +173,11 @@
                   content: 'Logout',
                   replacement: 'Đăng xuất',
               },
+              {
+                  selector: '#root > div > header > div > div > nav.nav.secondary-menu-container.align-items-center.ml-auto > div > div > a:nth-child(4)',
+                  content: 'Logout',
+                  replacement: 'Đăng xuất',
+              },
           ].forEach((item) => {
               const element = document.querySelector(item.selector);
               if (element && element.innerHTML.indexOf(item.content) != -1)
